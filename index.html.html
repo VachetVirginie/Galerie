@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Charles H Jaillard - Peinture Impressionniste</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'art-gold': '#966215',
+                        'art-dark': '#121212',
+                        'art-cream': '#FAF8F5',
+                        'art-sand': '#F2EDE4',
+                        'art-accent': '#C85A32'
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .paint-texture {
+            background-image: radial-gradient(rgba(150, 98, 21, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .painting-frame {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+            border: 12px solid #ffffff;
+            outline: 1px solid #e2d9cd;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F2EDE4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #966215;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-white text-art-dark font-sans antialiased paint-texture selection:bg-art-gold selection:text-white transition-colors duration-500" id="main-body">
+
+    <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-art-sand transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center group whitespace-nowrap">
+                <span class="text-xl sm:text-3xl font-sans font-light tracking-wide text-art-gold group-hover:text-art-dark transition-colors whitespace-nowrap">
+                    Charles H Jaillard
+                </span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-widest uppercase">
+                <a href="#accueil" class="hover:text-art-gold transition-colors py-1 border-b-2 border-transparent hover:border-art-gold">Accueil</a>
+                <a href="#galerie" class="hover:text-art-gold transition-colors py-1 border-b-2 border-transparent hover:border-art-gold">Exposition</a>
+                <a href="#artiste" class="hover:text-art-gold transition-colors py-1 border-b-2 border-transparent hover:border-art-gold">L'Artiste</a>
+                <a href="#contact" class="hover:text-art-gold transition-colors py-1 border-b-2 border-transparent hover:border-art-gold">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <a href="#galerie" class="hidden sm:inline-block px-5 py-2.5 border border-art-dark hover:bg-art-dark hover:text-white transition-all text-xs tracking-widest uppercase rounded-none font-medium">
+                    Découvrir les Œuvres
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl p-2 text-art-dark focus:outline-none" aria-label="Menu Mobile">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-art-sand px-6 py-6 space-y-4 text-center tracking-widest uppercase text-xs font-medium shadow-xl">
+            <a href="#accueil" class="block py-2 hover:text-art-gold mobile-link">Accueil</a>
+            <a href="#galerie" class="block py-2 hover:text-art-gold mobile-link">Exposition</a>
+            <a href="#artiste" class="block py-2 hover:text-art-gold mobile-link">L'Artiste</a>
+            <a href="#contact" class="block py-2 hover:text-art-gold mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <section id="accueil" class="min-h-screen pt-28 pb-16 flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-art-cream via-white to-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-left">
+                <div class="flex flex-col items-start gap-3">
+                    <svg class="h-12 w-12 text-art-gold" viewBox="0 0 100 100" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" aria-label="Soleil">
+                        <path d="M 50 23 C 66 22, 78 34, 77 50 C 76 66, 63 78, 47 77 C 32 76, 22 63, 23 47 C 24 33, 37 23, 52 24 C 60 25, 68 29, 71 36" fill="#FBBF24" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M 50 5 L 49 15 M 79 16 L 71 24 M 95 49 L 84 50 M 80 81 L 72 73 M 48 95 L 49 84 M 20 81 L 28 73 M 5 50 L 16 49 M 18 19 L 26 27" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                    <span class="text-xs uppercase tracking-[0.25em] text-art-gold font-semibold">Peinture Impressionniste Contemporaine</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-normal leading-none text-art-dark">
+                    La Lumière et la Couleur en <span class="italic text-art-gold font-light">Mouvement</span>.
+                </h1>
+                <p class="text-gray-600 text-base sm:text-lg font-light leading-relaxed max-w-xl">
+                    Bienvenue dans ma galerie en ligne. Explorez une collection de tableaux façonnés à l'huile, vibrant sous l'intensité des pigments purs, de la lumière du Sud et de la matière vive.
+                </p>
+                <div class="pt-4 flex flex-wrap gap-4">
+                    <a href="#artiste" class="px-8 py-4 border border-art-dark text-art-dark hover:bg-art-dark hover:text-white transition-all duration-300 text-xs uppercase tracking-widest font-medium">
+                        Rencontrer l'Artiste
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Featured Painting Card -->
+            <div class="relative flex justify-center items-center">
+                <div class="w-full max-w-md bg-white p-4 painting-frame transform hover:-rotate-1 transition-all duration-500 cursor-pointer group" onclick="openLightbox(110)">
+                    <div class="relative overflow-hidden h-96 bg-art-sand flex items-center justify-center">
+                        <img id="hero-img" src="https://i.postimg.cc/1R02QWdG/10.jpg" alt="Les voiles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="handleImageError(this, 'Les voiles')">
+                    </div>
+                    <div class="pt-4 text-center space-y-1">
+                        <span class="text-[10px] uppercase tracking-widest text-art-gold font-semibold block">Œuvre Phare</span>
+                        <h3 class="font-serif text-2xl font-normal text-art-dark">Les voiles</h3>
+                        <p class="text-xs text-gray-500 italic">Huile sur toile • 60 x 60 cm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerie" class="py-24 max-w-7xl mx-auto px-6 border-t border-art-sand">
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+            <span class="text-xs uppercase tracking-[0.3em] text-art-gold font-semibold block">Exposition Permanente</span>
+            <h2 class="text-3xl sm:text-5xl font-serif font-normal">Galerie des Œuvres</h2>
+            <div class="w-16 h-[2px] bg-art-gold mx-auto my-4"></div>
+
+            <!-- 4 Categories Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 pt-4 pb-2" id="category-filters">
+                <button onclick="filterCategory('All')" class="cat-btn px-4 py-2 text-xs uppercase tracking-wider font-medium transition-all border border-art-gold bg-art-gold text-white" data-category="All">Toutes les œuvres</button>
+                <button onclick="filterCategory('Exposition au Lavandou')" class="cat-btn px-4 py-2 text-xs uppercase tracking-wider font-medium transition-all border border-art-sand hover:border-art-gold text-art-dark bg-white" data-category="Exposition au Lavandou">Exposition au Lavandou</button>
+                <button onclick="filterCategory('Paysages')" class="cat-btn px-4 py-2 text-xs uppercase tracking-wider font-medium transition-all border border-art-sand hover:border-art-gold text-art-dark bg-white" data-category="Paysages">Paysages</button>
+                <button onclick="filterCategory('Scènes de vie')" class="cat-btn px-4 py-2 text-xs uppercase tracking-wider font-medium transition-all border border-art-sand hover:border-art-gold text-art-dark bg-white" data-category="Scènes de vie">Scènes de vie</button>
+                <button onclick="filterCategory('Bords de mer')" class="cat-btn px-4 py-2 text-xs uppercase tracking-wider font-medium transition-all border border-art-sand hover:border-art-gold text-art-dark bg-white" data-category="Bords de mer">Bords de mer</button>
+            </div>
+
+            <!-- Search / Counter Bar -->
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-xl mx-auto">
+                <div class="relative w-full">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+                    <input type="text" id="search-input" onkeyup="filterPaintings()" placeholder="Rechercher un titre ou un mot-clé..." class="w-full pl-10 pr-4 py-2.5 bg-art-cream border border-art-sand text-xs focus:outline-none focus:border-art-gold transition-colors rounded-none">
+                </div>
+                <span id="artwork-count" class="text-xs uppercase tracking-widest text-art-gold font-semibold whitespace-nowrap">
+                    44 Œuvres
+                </span>
+            </div>
+        </div>
+
+        <!-- Dynamic Gallery Grid Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+            <!-- Tableaux injectés dynamiquement par JS -->
+        </div>
+    </section>
+
+    <section id="artiste" class="py-24 bg-art-cream border-t border-b border-art-sand">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Portrait Image & Quote Card -->
+                <div class="lg:col-span-5 relative lg:sticky lg:top-28">
+                    <div class="relative z-10 bg-white p-3 shadow-xl border border-art-sand">
+                        <img id="artist-portrait-img" src="https://i.postimg.cc/nLpb76NX/100.jpg" alt="Charles H Jaillard" class="w-full h-auto max-h-[600px] object-cover object-center" onerror="handleImageError(this, 'Charles H Jaillard')">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 w-full h-full bg-art-gold/10 -z-0 border border-art-gold/20"></div>
+                </div>
+
+                <!-- Biography Narrative with 5 Revelations -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.3em] text-art-gold font-semibold block mb-2">À Propos de l'Artiste</span>
+                        <h2 class="text-3xl sm:text-5xl font-serif font-normal">Faisons Connaissance !</h2>
+                        <div class="w-16 h-[2px] bg-art-gold my-4"></div>
+                        <p class="text-gray-600 font-light text-base italic">
+                            Voici le top 5 des révélations essentielles pour comprendre mon univers et ma démarche artistique.
+                        </p>
+                    </div>
+
+                    <!-- 5 Revelations List -->
+                    <div class="space-y-4">
+                        <div class="flex gap-4 p-5 bg-white border border-art-sand shadow-sm hover:shadow-md transition-shadow">
+                            <span class="font-serif text-3xl font-bold text-art-gold leading-none">01</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-art-dark mb-1">Coloriste de profession</h3>
+                                <p class="text-gray-600 text-sm font-light leading-relaxed">
+                                    Mon métier de graphiste-illustrateur m'a amené à passer la première partie de ma vie à harmoniser les couleurs et à chercher le cadrage parfait. Aujourd'hui, je mets cette rigueur visuelle au service de mon intuition sur la toile.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 p-5 bg-white border border-art-sand shadow-sm hover:shadow-md transition-shadow">
+                            <span class="font-serif text-3xl font-bold text-art-gold leading-none">02</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-art-dark mb-1">Tourné vers le soleil</h3>
+                                <p class="text-gray-600 text-sm font-light leading-relaxed">
+                                    Mes toiles sont vibrantes et solaires. Je cherche avant tout à capter l'éclat du Sud et la tiédeur des après-midis au Lavandou. La tristesse n'a pas sa place sur ma palette !
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 p-5 bg-white border border-art-sand shadow-sm hover:shadow-md transition-shadow">
+                            <span class="font-serif text-3xl font-bold text-art-gold leading-none">03</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-art-dark mb-1">Impressionniste moderne</h3>
+                                <p class="text-gray-600 text-sm font-light leading-relaxed">
+                                    Inspiré par les grands maîtres de la lumière, je revisite l'impressionnisme avec une touche contemporaine, des aplats structurés et une matière généreuse travaillée au couteau.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 p-5 bg-white border border-art-sand shadow-sm hover:shadow-md transition-shadow">
+                            <span class="font-serif text-3xl font-bold text-art-gold leading-none">04</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-art-dark mb-1">Collectionneur de détails</h3>
+                                <p class="text-gray-600 text-sm font-light leading-relaxed">
+                                    Mon travail commence sur le terrain : balades sur le sentier du littoral, croquis volés et photographies. Je rassemble des éclats de réalité pour recomposer en atelier une atmosphère émotionnelle.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 p-5 bg-white border border-art-sand shadow-sm hover:shadow-md transition-shadow">
+                            <span class="font-serif text-3xl font-bold text-art-gold leading-none">05</span>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-art-dark mb-1">Un brin contemplatif</h3>
+                                <p class="text-gray-600 text-sm font-light leading-relaxed">
+                                    Peindre demande de savoir s'arrêter. Avant chaque coup de pinceau, il y a un temps d'observation silencieuse... que mon épouse qualifie affectueusement d'art de <em>"regarder les mouches voler"</em> !
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center space-y-4 mb-12">
+                <span class="text-xs uppercase tracking-[0.3em] text-art-gold font-semibold block">Contact & Acquisition</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-normal">Une question ?</h2>
+                <div class="w-16 h-[2px] bg-art-gold mx-auto my-4"></div>
+                <p class="text-gray-600 font-light text-sm sm:text-base">
+                    Pour toute demande d'acquisition, de prix ou pour réserver un tableau exposé, envoyez-moi un message direct.
+                </p>
+            </div>
+
+            <form id="contact-form" class="bg-white p-8 sm:p-12 border border-art-sand shadow-xl space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2 font-medium">Votre Nom *</label>
+                        <input type="text" required class="w-full p-3.5 bg-art-cream/40 border border-gray-200 text-sm focus:outline-none focus:border-art-gold transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2 font-medium">Votre Email *</label>
+                        <input type="email" required class="w-full p-3.5 bg-art-cream/40 border border-gray-200 text-sm focus:outline-none focus:border-art-gold transition-colors">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2 font-medium">Sujet / Œuvre Concernée</label>
+                    <input type="text" id="form-subject" class="w-full p-3.5 bg-art-cream/40 border border-gray-200 text-sm focus:outline-none focus:border-art-gold transition-colors">
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2 font-medium">Votre Message *</label>
+                    <textarea rows="5" required class="w-full p-3.5 bg-art-cream/40 border border-gray-200 text-sm focus:outline-none focus:border-art-gold transition-colors"></textarea>
+                </div>
+
+                <div class="text-center pt-2">
+                    <button type="submit" class="px-10 py-4 bg-art-dark text-white hover:bg-art-gold transition-colors duration-300 text-xs uppercase tracking-widest font-medium shadow-md">
+                        Envoyer le Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-art-dark text-white py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-6 text-center space-y-6">
+            <h3 class="text-2xl font-serif font-light tracking-wider">GALERIE <span class="text-art-gold">.</span> CHARLES H JAILLARD</h3>
+            <p class="text-gray-400 text-xs tracking-widest uppercase">Atelier d'Art Impressionniste • Le Lavandou, France</p>
+
+            <div class="flex justify-center space-x-6 text-lg text-gray-400 pt-2">
+                <a href="#" class="hover:text-art-gold transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-art-gold transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-art-gold transition-colors" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+
+            <div class="text-xs text-gray-500 font-light border-t border-stone-800 pt-6">
+                &copy; 2026 Galerie Charles H Jaillard. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="fixed inset-0 z-50 bg-white/95 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-8" onclick="handleBackdropClick(event)">
+        <div class="bg-white text-art-dark w-full max-w-5xl max-h-[92vh] overflow-y-auto relative shadow-2xl flex flex-col md:flex-row border border-art-sand" id="lightbox-container">
+            
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-20 w-10 h-10 bg-white border border-art-sand text-art-dark hover:bg-art-gold hover:text-white flex items-center justify-center transition-colors shadow-md" aria-label="Fermer">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <button onclick="prevPainting(event)" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white/90 border border-art-sand text-art-dark hover:bg-art-gold hover:text-white flex items-center justify-center transition-colors shadow-md" aria-label="Précédent">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button onclick="nextPainting(event)" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-white/90 border border-art-sand text-art-dark hover:bg-art-gold hover:text-white flex items-center justify-center transition-colors shadow-md" aria-label="Suivant">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Painting View Box -->
+            <div class="md:w-3/5 bg-art-cream flex items-center justify-center p-6 min-h-[350px] relative border-b md:border-b-0 md:border-r border-art-sand">
+                <img id="lb-image" src="" alt="" class="max-h-[70vh] w-auto object-contain shadow-lg">
+            </div>
+
+            <!-- Details Box -->
+            <div class="md:w-2/5 p-8 flex flex-col justify-between space-y-6 bg-white">
+                <div class="space-y-4">
+                    <span id="lb-category" class="text-[10px] uppercase tracking-widest text-art-gold font-semibold block">Catégorie</span>
+                    <h3 id="lb-title" class="text-3xl font-serif font-normal text-art-dark">Titre du Tableau</h3>
+                    <div class="w-12 h-[2px] bg-art-gold"></div>
+                    
+                    <p id="lb-description" class="text-gray-600 text-sm font-light leading-relaxed">
+                        Description de l'œuvre et émotions.
+                    </p>
+
+                    <div class="space-y-2.5 text-xs uppercase tracking-wider text-gray-700 pt-4 border-t border-art-sand">
+                        <div class="flex justify-between"><span class="text-gray-400">Technique:</span> <span id="lb-technique" class="font-medium">Huile sur toile</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Dimensions:</span> <span id="lb-dimensions" class="font-medium">40 x 40 cm</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Année:</span> <span id="lb-year" class="font-medium">2026</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Prix:</span> <span id="lb-price" class="font-serif font-bold text-sm text-art-gold">300 €</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Statut:</span> <span id="lb-status" class="font-medium text-emerald-700">Disponible</span></div>
+                    </div>
+                </div>
+
+                <div class="space-y-3 pt-4 border-t border-art-sand">
+                    <button id="lb-inquire-btn" class="w-full py-3.5 bg-art-dark text-white hover:bg-art-gold transition-colors text-xs uppercase tracking-widest font-medium">
+                        Réserver / Acquérir cette œuvre
+                    </button>
+                    <div class="flex gap-2">
+                        <button onclick="prevPainting(event)" class="w-1/2 py-2.5 border border-gray-300 hover:bg-gray-100 transition-colors text-xs uppercase tracking-widest flex items-center justify-center gap-1">
+                            <i class="fa-solid fa-arrow-left text-[10px]"></i> Précédent
+                        </button>
+                        <button onclick="nextPainting(event)" class="w-1/2 py-2.5 border border-gray-300 hover:bg-gray-100 transition-colors text-xs uppercase tracking-widest flex items-center justify-center gap-1">
+                            Suivant <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-art-dark text-white px-6 py-4 shadow-2xl hidden flex items-center gap-3 border-l-4 border-art-gold">
+        <i class="fa-solid fa-circle-check text-art-gold text-lg"></i>
+        <span id="toast-message" class="text-xs tracking-wider uppercase">Votre message a été transmis à l'artiste.</span>
+    </div>
+
+    <script>
+        /* HTML5 Canvas Procedural Impressionist Painter fallback generator */
+        function createImpressionistCanvasArt(title, width = 600, height = 600) {
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+
+            const colorPalette = ['#F9F6F0', '#E2D3C4', '#C8A364', '#966215', '#4A6B82', '#E78A53', '#2C5E8A'];
+
+            const bgGrad = ctx.createLinearGradient(0, 0, 0, height);
+            bgGrad.addColorStop(0, colorPalette[0]);
+            bgGrad.addColorStop(0.6, colorPalette[1]);
+            bgGrad.addColorStop(1, colorPalette[2]);
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, width, height);
+
+            const strokesCount = 1000;
+            for (let i = 0; i < strokesCount; i++) {
+                const x = Math.random() * width;
+                const y = Math.random() * height;
+                const color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
+                
+                ctx.save();
+                ctx.translate(x, y);
+                ctx.rotate((Math.random() - 0.5) * Math.PI / 3);
+                ctx.fillStyle = color;
+                ctx.globalAlpha = 0.3 + Math.random() * 0.5;
+
+                const strokeWidth = 15 + Math.random() * 25;
+                const strokeHeight = 6 + Math.random() * 10;
+                ctx.beginPath();
+                ctx.ellipse(0, 0, strokeWidth, strokeHeight, 0, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+
+            ctx.globalAlpha = 1.0;
+            ctx.strokeStyle = '#966215';
+            ctx.lineWidth = 12;
+            ctx.strokeRect(10, 10, width - 20, height - 20);
+
+            ctx.fillStyle = '#121212';
+            ctx.font = 'italic 28px Cormorant Garamond, serif';
+            ctx.textAlign = 'center';
+            ctx.fillText(title, width / 2, height / 2);
+
+            ctx.fillStyle = '#966215';
+            ctx.font = '600 12px Poppins, sans-serif';
+            ctx.fillText('CHARLES H JAILLARD • HUILE SUR TOILE', width / 2, height / 2 + 40);
+
+            return canvas.toDataURL('image/jpeg');
+        }
+
+        function handleImageError(imgElement, title) {
+            imgElement.onerror = null;
+            imgElement.src = createImpressionistCanvasArt(title);
+        }
+
+        const paintings = [
+            {
+                id: 101,
+                title: "La maison aux citronniers",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/zBvZBTRT/1.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Un élégant portail en fer forgé encadré de piliers en brique et de palmiers luxuriants abritant une belle villa."
+            },
+            {
+                id: 102,
+                title: "La plage du Centre du Lavandou",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/50yd08FF/2.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Perspective sur le littoral et la magnifique baie du Lavandou."
+            },
+            {
+                id: 103,
+                title: "La villa aux volets bleus",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/tTJQTFVh/3.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Joli portail rue du Port au Lavandou baigné de soleil."
+            },
+            {
+                id: 104,
+                title: "Vers la plage St Clair",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/HxnDxb7y/4.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Belle maison classée surplombant la plage St Clair."
+            },
+            {
+                id: 105,
+                title: "En allant sur la plage de St Clair",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/hjvWjV71/5.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Promenade ensoleillée le long de la côte méditerranéenne."
+            },
+            {
+                id: 106,
+                title: "A l'ombre des platanes",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/hjYF7h9Q/6.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Une scène de pétanque à l'ombre des platanes, restituant l'ambiance chaleureuse et la lumière estivale."
+            },
+            {
+                id: 107,
+                title: "Départ pour les Iles d'Or",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/QNgw36zb/7.jpg",
+                dimensions: "61 x 46 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "500 €",
+                status: "Disponible",
+                description: "Scène vivante sur le quai du port du Lavandou où les promeneurs s'apprêtent à embarquer."
+            },
+            {
+                id: 108,
+                title: "La brasserie du Centre au Lavandou",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/1R02QWdr/8.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile au couteau",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "L'animation conviviale de la brasserie du Centre au Lavandou."
+            },
+            {
+                id: 109,
+                title: "Les cabanes bleues de l'école de voile",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/gcyQWM7y/9.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile au couteau",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Touches vives de bleu pour les cabanes de l'école de voile au bord de la plage."
+            },
+            {
+                id: 110,
+                title: "Les voiles",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/1R02QWdG/10.jpg",
+                dimensions: "60 x 60 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "650 €",
+                status: "Disponible",
+                description: "Alignement graphique et coloré de petits voiliers et dériveurs prêts pour la navigation."
+            },
+            {
+                id: 111,
+                title: "Chantier naval du Lavandou",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/zDw6rdQM/11.jpg",
+                dimensions: "60 x 50 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "640 €",
+                status: "Disponible",
+                description: "Composition graphique et puissante captant le portique bleu 'Lavandou Carène' et la coque majestueuse d'un voilier en révision."
+            },
+            {
+                id: 112,
+                title: "Plage de Cavalière",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/WpmCv9yf/12.jpg",
+                dimensions: "55 x 46 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "430 €",
+                status: "Disponible",
+                description: "La touche est résolument impressionniste, très libre et vibrante. Les personnages sur la plage captent l'atmosphère estivale."
+            },
+            {
+                id: 113,
+                title: "Le moniteur de voile",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/5NxGNBcK/13.jpg",
+                dimensions: "50 x 50 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "450 €",
+                status: "Disponible",
+                description: "Moment d'effervescence estivale sur la plage du Lavandou où l'on grée les voiles colorées et les dériveurs Pico avant le départ."
+            },
+            {
+                id: 114,
+                title: "Le port de La Ciotat",
+                category: "Exposition au Lavandou",
+                image: "https://i.postimg.cc/yYV5YmqG/14.jpg",
+                dimensions: "61 x 50 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "550 €",
+                status: "Disponible",
+                description: "Jeux de reflets et harmonies d'ocres sur les eaux du port, bordé par les façades chaleureuses et l'animation du quai."
+            },
+            {
+                id: 201,
+                title: "Le lac du Bourget",
+                category: "Paysages",
+                image: "https://i.postimg.cc/SKNCnKQG/26.jpg",
+                dimensions: "60 x 50 cm",
+                technique: "Huile au couteau",
+                year: "2026",
+                price: "Non disponible",
+                status: "Vendu",
+                description: "Scène paisible et ombragée sous la frondaison des arbres au bord de l'eau, jouant avec les éclats de lumière."
+            },
+            {
+                id: 202,
+                title: "Perspective provençale",
+                category: "Paysages",
+                image: "https://i.postimg.cc/YSqYvS2f/27.jpg",
+                dimensions: "50 x 50 cm",
+                technique: "Huile au couteau",
+                year: "2024",
+                price: "450 €",
+                status: "Disponible",
+                description: "Mosaïque colorée de champs de lavande et de terres dorées serpentant jusqu'aux collines et mas provençaux."
+            },
+            {
+                id: 203,
+                title: "Champs de blé et lavande",
+                category: "Paysages",
+                image: "https://i.postimg.cc/nLcBXLVG/28.jpg",
+                dimensions: "55 x 38 cm",
+                technique: "Huile au couteau",
+                year: "2024",
+                price: "350 €",
+                status: "Disponible",
+                description: "Perspective rythmée sur les vallons moissonnés et les lignes de lavande."
+            },
+            {
+                id: 204,
+                title: "Pont ferroviaire à Lyon",
+                category: "Paysages",
+                image: "https://i.postimg.cc/q7MyN7Bc/29.jpg",
+                dimensions: "50 x 50 cm",
+                technique: "Huile sur toile",
+                year: "2024",
+                price: "Non disponible",
+                status: "Vendu",
+                description: "Composition graphique captant la structure métallique d'un pont illuminé et un instant de quiétude au bord du fleuve."
+            },
+            {
+                id: 205,
+                title: "Paysage de la Drôme",
+                category: "Paysages",
+                image: "https://i.postimg.cc/5t7vLMjB/30.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile au couteau",
+                year: "2025",
+                price: "Non disponible",
+                status: "Vendu",
+                description: "Rangées vibrantes de vignes verdoyantes s'étendant sur une terre ocre, adossées à une haute haie de cyprès."
+            },
+            {
+                id: 206,
+                title: "Le massif du Vercors",
+                category: "Paysages",
+                image: "https://i.postimg.cc/s26S7R1P/32.jpg",
+                dimensions: "80 x 65 cm",
+                technique: "Huile au couteau",
+                year: "2024",
+                price: "930 €",
+                status: "Disponible",
+                description: "Puissante falaise calcaire baignée de lumière s'élevant au-dessus d'un dégradé de champs ocre et de lavandes."
+            },
+            {
+                id: 207,
+                title: "Arbres fruitiers en Provence",
+                category: "Paysages",
+                image: "https://i.postimg.cc/MGPRV8XD/33.jpg",
+                dimensions: "50 x 50 cm",
+                technique: "Huile au couteau",
+                year: "2026",
+                price: "Non disponible",
+                status: "Vendu",
+                description: "Alignement d'oliviers aux feuillages lumineux se détachant sur une étendue violette de lavandes."
+            },
+            {
+                id: 208,
+                title: "L'arbre devant la bâtisse ocre",
+                category: "Paysages",
+                image: "https://i.postimg.cc/XvHFd0Xg/34.jpg",
+                dimensions: "50 x 50 cm",
+                technique: "Huile sur toile",
+                year: "2025",
+                price: "Non disponible",
+                status: "Vendu",
+                description: "Jeux d'ombres et de lumière sur la façade ocre d'un mas provençal aux fenêtres azur."
+            },
+            {
+                id: 209,
+                title: "Quartier St Paul à Lyon",
+                category: "Paysages",
+                image: "https://i.postimg.cc/TP7mgXhZ/35.jpg",
+                dimensions: "60 x 50 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "540 €",
+                status: "Disponible",
+                description: "Une rue du Vieux Lyon longeant les quais de Saône, caractérisée par de hauts immeubles aux façades ocres."
+            },
+            {
+                id: 210,
+                title: "Le Printemps",
+                category: "Paysages",
+                image: "https://i.postimg.cc/W4WrgPtg/31.jpg",
+                dimensions: "80 x 65 cm",
+                technique: "Huile au couteau",
+                year: "2024",
+                price: "930 €",
+                status: "Disponible",
+                description: "Touche vive et spontanée pour cet arbre aux fleurs blanches étincelantes évoquant la renaissance."
+            },
+            {
+                id: 211,
+                title: "La bastide aux volets bleus",
+                category: "Paysages",
+                image: "https://i.postimg.cc/BvYDHGtV/36.jpg",
+                dimensions: "60 x 50 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "530 €",
+                status: "Disponible",
+                description: "Une élégante demeure provençale aux volets bleus émergeant d'une végétation luxuriante."
+            },
+            {
+                id: 301,
+                title: "Les dernières nouvelles",
+                category: "Scènes de vie",
+                image: "https://i.postimg.cc/vB0P4jdc/37.jpg",
+                dimensions: "30 x 30 cm",
+                technique: "Huile sur toile",
+                year: "2024",
+                price: "160 €",
+                status: "Disponible",
+                description: "Les dernières nouvelles.... Un moment de tranquillité à l'ombre."
+            },
+            {
+                id: 302,
+                title: "Au marché provençal",
+                category: "Scènes de vie",
+                image: "https://i.postimg.cc/3RtLk6H4/38.jpg",
+                dimensions: "46 x 38 cm",
+                technique: "Huile sur toile",
+                year: "2023",
+                price: "300 €",
+                status: "Disponible",
+                description: "Scène de marché animée et intimiste où les clients choisissent leurs produits devant un étal coloré abrité sous un parasol."
+            },
+            {
+                id: 303,
+                title: "Marché de Villefranche-sur-Mer",
+                category: "Scènes de vie",
+                image: "https://i.postimg.cc/Kz091Vy1/39.jpg",
+                dimensions: "60 x 45 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "450 €",
+                status: "Disponible",
+                description: "Promeneurs flânant parmi les stands d'un marché artisanal en plein air, sous la lumière filtrée par la frondaison des palmiers."
+            },
+            {
+                id: 304,
+                title: "Sieste sous les arbres",
+                category: "Scènes de vie",
+                image: "https://i.postimg.cc/J0tpZq1R/40.jpg",
+                dimensions: "80 x 60 cm",
+                technique: "Huile au couteau",
+                year: "2024",
+                price: "Non disponible",
+                status: "Vendu",
+                description: "Atmosphère paisible et poétique de promeneurs goûtant à la fraîcheur d'un repos abrité sous la canopée majestueuse d'un parc."
+            },
+            {
+                id: 305,
+                title: "Les chaises vertes",
+                category: "Scènes de vie",
+                image: "https://i.postimg.cc/hvh2TrSD/41.jpg",
+                dimensions: "50 x 50 cm",
+                technique: "Huile sur toile",
+                year: "2025",
+                price: "Non disponible",
+                status: "Vendu",
+                description: "Moment de convivialité en terrasse d'un bistro aux façades azur et chaises vertes, baigné par la douce clarté méditerranéenne."
+            },
+            {
+                id: 306,
+                title: "Pause café",
+                category: "Scènes de vie",
+                image: "https://i.postimg.cc/Fz1T3Z9R/42.jpg",
+                dimensions: "50 x 50 cm",
+                technique: "Huile au couteau",
+                year: "2025",
+                price: "Non disponible",
+                status: "Vendu",
+                description: "Instant complice et intimiste capté en terrasse, où le serveur apporte les rafraîchissements à un couple installé à l'ombre."
+            },
+            {
+                id: 307,
+                title: "La terrasse du Sévigné à Grignan",
+                category: "Scènes de vie",
+                image: "https://i.postimg.cc/8csZMH1s/43.jpg",
+                dimensions: "80 x 60 cm",
+                technique: "Huile sur toile",
+                year: "2024",
+                price: "Non disponible",
+                status: "Vendu",
+                description: "Vaste composition lumineuse et vibrante restitutant l'ambiance chaleureuse de la terrasse du Sévigné sous l'ombre généreuse d'un majestueux platane."
+            },
+            {
+                id: 308,
+                title: "Eclats du marché",
+                category: "Scènes de vie",
+                image: "https://i.postimg.cc/QCVf1bXF/44.jpg",
+                dimensions: "60 x 50 cm",
+                technique: "Huile sur toile",
+                year: "2024",
+                price: "Non disponible",
+                status: "Vendu",
+                description: "Étalage coloré et promeneurs flânant sous les palmiers du Sud, où les seaux de fleurs éclatantes rivalisent avec la lumière estivale."
+            },
+            {
+                id: 116,
+                title: "Ancienne maison",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/W1HD9w6B/16.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Élégante bastide aux volets verts aperçue derrière une grille en fer forgé."
+            },
+            {
+                id: 117,
+                title: "Vue sur l'hôtel L'Ilôt Fleuri",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/X70d6L5M/17.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Composition graphique et lumineuse cadrée par le tronc tortueux d'un pin maritime orienté vers les façades de l'hôtel."
+            },
+            {
+                id: 118,
+                title: "La plage du Centre",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/TYXgv0bM/18.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "La plage animée du Centre du Lavandou vue depuis le balcon."
+            },
+            {
+                id: 119,
+                title: "Jour de grand vent",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/jdrPYc7G/19.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Atmosphère marine vibrante et palette subtile captant la force du vent courbant la ramure des palmiers face à une mer mouvementée."
+            },
+            {
+                id: 120,
+                title: "Vue de notre balcon",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/wTdLY2mn/20.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Moment de quiétude matinale contemplant la mer qui se confond avec l'horizon azur."
+            },
+            {
+                id: 121,
+                title: "L'embarquement pour les Îles d'Or",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/DzbwZkVj/21.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Moment d'attente estival et coloré sur le quai du port, où les voyageurs patientent pour embarquer à bord de la navette Le Corsaire."
+            },
+            {
+                id: 122,
+                title: "Sentier du littoral",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/g062JF9t/22.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Petit sentier tortueux et escarpé baigné de soleil pour accéder à la plage St Clair par la mer."
+            },
+            {
+                id: 123,
+                title: "Les pins parasol",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/wBsjv8Kb/23.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Les pins parasol de la résidence La Méridienne au Lavandou se découpant sur le ciel azur."
+            },
+            {
+                id: 124,
+                title: "Sur les hauteurs",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/HL7kxDGh/24.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Composition étagée mettant en valeur les toits en tuiles romaines et les villas accrochées à la colline verdoyante."
+            },
+            {
+                id: 125,
+                title: "Petit square",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/q7CvRVfY/25.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Havre de paix ombragé où la lumière filtre délicatement à travers la frondaison des arbres."
+            },
+            {
+                id: 126,
+                title: "Vue du balcon",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/Gp6ypx48/15.jpg",
+                dimensions: "40 x 40 cm",
+                technique: "Huile au couteau",
+                year: "2026",
+                price: "300 €",
+                status: "Disponible",
+                description: "Façades colorées et perspective lumineuse du Lavandou depuis le balcon."
+            },
+            {
+                id: 401,
+                title: "Port de Cadaqués",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/d0TV1PMp/45.jpg",
+                dimensions: "80 x 60 cm",
+                technique: "Huile sur toile",
+                year: "2024",
+                price: "Non disponible",
+                status: "Vendu",
+                description: "Scène animée et colorée du port de Cadaqués. Au premier plan, de nombreuses embarcations flottent sur une mer d'un bleu vif."
+            },
+            {
+                id: 402,
+                title: "Sous le parasol bleu",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/QtymqTYC/46.jpg",
+                dimensions: "30 x 30 cm",
+                technique: "Huile au couteau",
+                year: "2026",
+                price: "Non disponible",
+                status: "Vendu",
+                description: "Instant de détente estivale captant la douceur du farniente à l'ombre d'un large parasol bleu sur le sable chaud."
+            },
+            {
+                id: 403,
+                title: "Le Port d'Ajaccio",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/4dSP192n/47.jpg",
+                dimensions: "60 x 60 cm",
+                technique: "Huile au couteau",
+                year: "2024",
+                price: "630 €",
+                status: "Disponible",
+                description: "L'hôtel de ville et les palmiers qui bordent le quai Napoléon avec les terrasses de cafés face aux bateaux."
+            },
+            {
+                id: 404,
+                title: "Plage de Beaulieu-sur-Mer",
+                category: "Bords de mer",
+                image: "https://i.postimg.cc/tTMkzxvY/48.jpg",
+                dimensions: "60 x 50 cm",
+                technique: "Huile sur toile",
+                year: "2026",
+                price: "520 €",
+                status: "Disponible",
+                description: "Douceur méditerranéenne et reflets turquoises sur la plage de Beaulieu-sur-Mer."
+            }
+        ];
+
+        let currentFilteredPaintings = [...paintings];
+        let currentPaintingIndex = 0;
+        let activeCategory = 'All';
+
+        function renderGallery(filteredList = currentFilteredPaintings) {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = '';
+
+            currentFilteredPaintings = filteredList;
+            document.getElementById('artwork-count').innerText = `${currentFilteredPaintings.length} Œuvre${currentFilteredPaintings.length > 1 ? 's' : ''}`;
+
+            if (currentFilteredPaintings.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-500 font-light">Aucun tableau ne correspond à votre recherche dans cette catégorie.</div>`;
+                return;
+            }
+
+            currentFilteredPaintings.forEach((painting, index) => {
+                const card = document.createElement('div');
+                card.className = "group bg-white border border-art-sand shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer overflow-hidden";
+                card.onclick = () => openLightboxByIndex(index);
+
+                const isVendu = painting.status === 'Vendu';
+                const statusBadge = isVendu 
+                    ? `<span class="px-2.5 py-1 bg-gray-800 text-white text-[10px] uppercase tracking-wider font-semibold">Vendu</span>`
+                    : `<span class="px-2.5 py-1 bg-emerald-700 text-white text-[10px] uppercase tracking-wider font-semibold">Disponible</span>`;
+
+                card.innerHTML = `
+                    <div class="relative overflow-hidden h-80 bg-art-cream">
+                        <img src="${painting.image}" alt="${painting.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="handleImageError(this, '${painting.title.replace(/'/g, "\\'")}')">
+                        <div class="absolute top-3 right-3 z-10">
+                            ${statusBadge}
+                        </div>
+                        <div class="absolute inset-0 bg-art-dark/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="px-5 py-2.5 bg-white/95 backdrop-blur-sm text-art-dark text-xs uppercase tracking-widest font-medium shadow-lg">Agrandir / Détails</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between space-y-3">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-art-gold font-semibold block mb-1">${painting.category}</span>
+                            <h3 class="font-serif text-2xl text-art-dark group-hover:text-art-gold transition-colors">${painting.title}</h3>
+                            <p class="text-xs text-gray-500 italic mt-1">${painting.technique} • ${painting.dimensions}</p>
+                        </div>
+                        <div class="pt-4 border-t border-art-sand flex justify-between items-center text-xs">
+                            <span class="font-serif text-lg font-bold ${isVendu ? 'text-gray-400 font-normal italic' : 'text-art-gold'}">${painting.price || 'Collection particulière'}</span>
+                            <span class="text-gray-400 uppercase tracking-wider group-hover:text-art-dark transition-colors font-medium">Voir l'œuvre →</span>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterCategory(category) {
+            activeCategory = category;
+
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.className = "cat-btn px-4 py-2 text-xs uppercase tracking-wider font-medium transition-all border border-art-gold bg-art-gold text-white";
+                } else {
+                    btn.className = "cat-btn px-4 py-2 text-xs uppercase tracking-wider font-medium transition-all border border-art-sand hover:border-art-gold text-art-dark bg-white";
+                }
+            });
+
+            filterPaintings();
+        }
+
+        function filterPaintings() {
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            
+            const filtered = paintings.filter(p => {
+                const matchesCategory = activeCategory === 'All' || p.category === activeCategory;
+                const matchesQuery = !query || 
+                    p.title.toLowerCase().includes(query) || 
+                    p.description.toLowerCase().includes(query) ||
+                    p.technique.toLowerCase().includes(query);
+                
+                return matchesCategory && matchesQuery;
+            });
+
+            renderGallery(filtered);
+        }
+
+        function openLightbox(id) {
+            const globalIndex = paintings.findIndex(p => p.id === id);
+            if (globalIndex !== -1) {
+                currentFilteredPaintings = [...paintings];
+                openLightboxByIndex(globalIndex);
+            }
+        }
+
+        function openLightboxByIndex(index) {
+            currentPaintingIndex = index;
+            const painting = currentFilteredPaintings[currentPaintingIndex];
+            
+            const lbImg = document.getElementById('lb-image');
+            lbImg.src = painting.image;
+            lbImg.onerror = function() {
+                handleImageError(this, painting.title);
+            };
+
+            document.getElementById('lb-category').innerText = painting.category;
+            document.getElementById('lb-title').innerText = painting.title;
+            document.getElementById('lb-description').innerText = painting.description;
+            document.getElementById('lb-technique').innerText = painting.technique;
+            document.getElementById('lb-dimensions').innerText = painting.dimensions;
+            document.getElementById('lb-year').innerText = painting.year;
+            document.getElementById('lb-price').innerText = painting.price || 'Collection particulière';
+            
+            const statusEl = document.getElementById('lb-status');
+            if (painting.status === 'Vendu') {
+                statusEl.innerText = 'Collection particulière / Vendu';
+                statusEl.className = 'font-medium text-gray-500';
+            } else {
+                statusEl.innerText = 'Disponible à l\'acquisition';
+                statusEl.className = 'font-medium text-emerald-700';
+            }
+
+            document.getElementById('lb-inquire-btn').onclick = () => {
+                closeLightbox();
+                document.getElementById('form-subject').value = `Renseignement : ${painting.title}`;
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            };
+
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function prevPainting(e) {
+            if (e) e.stopPropagation();
+            currentPaintingIndex = (currentPaintingIndex - 1 + currentFilteredPaintings.length) % currentFilteredPaintings.length;
+            openLightboxByIndex(currentPaintingIndex);
+        }
+
+        function nextPainting(e) {
+            if (e) e.stopPropagation();
+            currentPaintingIndex = (currentPaintingIndex + 1) % currentFilteredPaintings.length;
+            openLightboxByIndex(currentPaintingIndex);
+        }
+
+        function handleBackdropClick(e) {
+            if (e.target.id === 'lightbox') {
+                closeLightbox();
+            }
+        }
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+            e.target.reset();
+        });
+
+        window.onload = function() {
+            renderGallery(paintings);
+        };
+    </script>
+</body>
+</html>
